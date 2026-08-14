@@ -1,0 +1,29 @@
+name: Compiler le plugin
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Installer Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+          cache: maven
+
+      - name: Compiler avec Maven
+        run: mvn -B clean package
+
+      - name: Mettre le .jar à disposition en téléchargement
+        uses: actions/upload-artifact@v4
+        with:
+          name: pioche-evolutive-jar
+          path: target/*.jar
