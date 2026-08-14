@@ -1,0 +1,25 @@
+name: PiocheEvolutive
+version: '1.0.0'
+main: com.pioche.evolutive.PickaxeEvolutivePlugin
+# Adapte cette valeur si besoin : avec le nouveau schéma de versioning de
+# Mojang/Paper (26.x), vérifie sur https://docs.papermc.io la syntaxe
+# attendue pour api-version au moment où tu compiles/déploies.
+api-version: '1.21'
+author: Toi
+description: Système de pioche évolutive par palier de 10 niveaux avec quêtes de minage.
+folia-supported: false
+
+commands:
+  pioche:
+    description: Commande principale du système de pioche évolutive
+    usage: /pioche <give|info|level|reload>
+    permission: pioche.use
+    permission-message: "Tu n'as pas la permission d'utiliser cette commande."
+
+permissions:
+  pioche.use:
+    description: Autorise l'usage de base de /pioche
+    default: true
+  pioche.admin:
+    description: Autorise give/level/reload
+    default: op

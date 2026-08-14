@@ -1,0 +1,123 @@
+# =========================================================
+#  Config de la Pioche Évolutive
+# =========================================================
+# Chaque palier définit :
+#   mining: largeur / hauteur / profondeur de la zone minée d'un coup
+#   speed: amplificateur de Hâte (Haste) appliqué au joueur qui tient la pioche (0 = aucun)
+#   fortune: niveau d'enchantement Fortune appliqué à la pioche
+#   efficiency: niveau d'enchantement Efficacité appliqué à la pioche
+#   reach-bonus: blocs de portée supplémentaires (0 = vanilla)
+#   sell-bonus: multiplicateur de vente (0.10 = +10%)
+#   quest: la quête à accomplir pour DÉBLOQUER ce palier (null = automatique / niveau 1)
+#       material: identifiant Bukkit du bloc à miner (ex: COAL_ORE), ou "ANY" pour "n'importe quel bloc"
+#       amount: quantité à miner
+
+levels:
+
+  1:
+    mining: { width: 1, height: 1, depth: 1 }
+    speed: 0
+    fortune: 1
+    efficiency: 0
+    reach-bonus: 0
+    sell-bonus: 0.0
+    quest: null
+
+  10:
+    mining: { width: 1, height: 1, depth: 1 }
+    speed: 1
+    fortune: 2
+    efficiency: 1
+    reach-bonus: 0
+    sell-bonus: 0.0
+    quest: { material: COAL_ORE, amount: 300 }
+
+  20:
+    mining: { width: 2, height: 1, depth: 1 }
+    speed: 1
+    fortune: 3
+    efficiency: 2
+    reach-bonus: 0
+    sell-bonus: 0.0
+    quest: { material: IRON_ORE, amount: 500 }
+
+  30:
+    mining: { width: 2, height: 2, depth: 1 }
+    speed: 2
+    fortune: 4
+    efficiency: 3
+    reach-bonus: 1
+    sell-bonus: 0.0
+    quest: { material: GOLD_ORE, amount: 400 }
+
+  40:
+    mining: { width: 2, height: 2, depth: 1 }
+    speed: 2
+    fortune: 6
+    efficiency: 4
+    reach-bonus: 1
+    sell-bonus: 0.0
+    quest: { material: REDSTONE_ORE, amount: 300 }
+
+  50:
+    mining: { width: 3, height: 3, depth: 1 }
+    speed: 3
+    fortune: 7
+    efficiency: 5
+    reach-bonus: 2
+    sell-bonus: 0.10
+    quest: { material: LAPIS_ORE, amount: 150 }
+
+  60:
+    mining: { width: 3, height: 3, depth: 1 }
+    speed: 3
+    fortune: 7
+    efficiency: 6
+    reach-bonus: 2
+    sell-bonus: 0.15
+    quest: { material: DIAMOND_ORE, amount: 150 }
+
+  70:
+    mining: { width: 3, height: 3, depth: 1 }
+    speed: 4
+    fortune: 8
+    efficiency: 7
+    reach-bonus: 3
+    sell-bonus: 0.20
+    quest: { material: EMERALD_ORE, amount: 100 }
+
+  75:
+    mining: { width: 3, height: 3, depth: 2 }
+    speed: 4
+    fortune: 9
+    efficiency: 7
+    reach-bonus: 3
+    sell-bonus: 0.25
+    quest: { material: ANY, amount: 200 }
+
+  80:
+    mining: { width: 3, height: 3, depth: 2 }
+    speed: 4
+    fortune: 9
+    efficiency: 8
+    reach-bonus: 3
+    sell-bonus: 0.30
+    quest: { material: ANCIENT_DEBRIS, amount: 50 }
+
+  90:
+    mining: { width: 3, height: 4, depth: 1 }
+    speed: 5
+    fortune: 9
+    efficiency: 9
+    reach-bonus: 3
+    sell-bonus: 0.40
+    quest: { material: ANCIENT_DEBRIS, amount: 80 }
+
+  100:
+    mining: { width: 3, height: 5, depth: 1 }
+    speed: 5
+    fortune: 10
+    efficiency: 10
+    reach-bonus: 3
+    sell-bonus: 0.50
+    quest: { material: NETHERITE_SCRAP, amount: 30 }
